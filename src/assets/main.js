@@ -67,7 +67,6 @@ function getResults(input) {
 }
 
 function getResultIcon(char, i, correctNumbers) {
-  console.log(`Char: ${char} Index: ${i}`);
   if (char === answer.value.charAt(i)) {
     correctNumbers.push(1);
     return '<span class="glyphicon glyphicon-ok"></span>';
