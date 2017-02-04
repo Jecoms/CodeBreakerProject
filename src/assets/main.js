@@ -4,8 +4,8 @@ let message = document.getElementById('message');
 
 function guess() {
     let input = document.getElementById('user-guess');
-    //add functionality to guess function here
-    if (!answer.value) { // && (!attempt.value && attempt.value !== 0)
+    
+    if (!answer.value) {
       setHiddenFields();
     }
 
@@ -28,12 +28,9 @@ function guess() {
     }
 }
 
-//implement new functions here
 function setHiddenFields() {
   answer.value = ("000" + Math.floor(Math.random() * 9999)).slice(-4);
   attempt.value = 0;
-
-  //console.log('Setting answer and attempt.');
 }
 
 function setMessage(newMessage) {
@@ -67,7 +64,6 @@ function getResults(input) {
 }
 
 function getResultIcon(char, i, correctNumbers) {
-  console.log(`Char: ${char} Index: ${i} Answer Value: ${answer.value} Index Of: ${answer.value.indexOf(char)}`);
   if (char === answer.value.charAt(i)) {
     correctNumbers.push(1);
     return '<span class="glyphicon glyphicon-ok"></span>';
